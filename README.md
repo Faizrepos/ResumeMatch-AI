@@ -2,11 +2,6 @@
 
 An AI-powered resume analyzer that evaluates how well a resume matches a job description, using Google's Gemini LLM to generate a structured, evidence-based intelligence report.
 
-**Live demo:** _add link if deployed_
-
-![ResumeMatch AI UI](./docs/screenshot-top.png)
-![ResumeMatch AI Report](./docs/screenshot-bottom.png)
-
 ## Features
 
 - Upload a resume as a PDF or paste it as plain text
@@ -20,10 +15,10 @@ An AI-powered resume analyzer that evaluates how well a resume matches a job des
 
 ## Tech Stack
 
-**Frontend:** React (Vite)
-**Backend:** Flask, Flask-CORS
-**AI:** Google Gemini API (`google-genai`)
-**PDF Parsing:** PyPDF2
+- **Frontend:** React (Vite)
+- **Backend:** Flask, Flask-CORS
+- **AI:** Google Gemini API (`google-genai`)
+- **PDF Parsing:** PyPDF2
 
 ## How It Works
 
@@ -47,12 +42,15 @@ An AI-powered resume analyzer that evaluates how well a resume matches a job des
 ## Getting Started
 
 ### Prerequisites
+
 - Python 3.10+
 - Node.js 18+
 - A Google Gemini API key ([get one here](https://aistudio.google.com/apikey))
 
 ### Backend Setup
+
 ```bash
+cd backend
 python -m venv venv
 source venv/bin/activate      # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -61,7 +59,9 @@ python app.py
 ```
 
 ### Frontend Setup
+
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
@@ -69,23 +69,29 @@ npm run dev
 The frontend runs on `http://localhost:5173` by default and expects the backend at `http://localhost:5000`.
 
 ## Project Structure
-ResumeMatch AI/
-├── app.py # Flask app, Gemini prompt & API routes
-├── requirements.txt
-├── src/
-│ ├── pages/
-│ │ └── Home.jsx # Main page — inputs + report
-│ ├── components/
-│ │ ├── ResumeUpload.jsx # PDF upload (drag/browse, 5MB limit)
-│ │ ├── ResumeInput.jsx # Paste resume text
-│ │ ├── JobDescriptionInput.jsx
-│ │ ├── AnalyzeButton.jsx
-│ │ ├── AnalysisResult.jsx # Score rings, breakdown, insights
-│ │ └── Navbar.jsx
-│ └── services/
-│ └── api.js # API client
-└── package.json
 
+```
+resume-match-ai/
+├── backend/
+│   ├── app.py                 # Flask app, Gemini prompt & API routes
+│   ├── requirements.txt
+│   └── .env.example
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   └── Home.jsx
+│   │   ├── components/
+│   │   │   ├── ResumeUpload.jsx
+│   │   │   ├── ResumeInput.jsx
+│   │   │   ├── JobDescriptionInput.jsx
+│   │   │   ├── AnalyzeButton.jsx
+│   │   │   ├── AnalysisResult.jsx
+│   │   │   └── Navbar.jsx
+│   │   └── services/
+│   │       └── api.js
+│   └── package.json
+```
 
 ## Author
+
 **Faiz Abdul Rahim** — [GitHub](https://github.com/Faizrepos) · [LinkedIn](https://www.linkedin.com/in/faizabdulrahim)
