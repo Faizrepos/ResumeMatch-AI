@@ -1,5 +1,8 @@
 # ResumeMatch AI
 
+<img width="1365" height="590" alt="ResumeMatch AI Cover Image" src="https://github.com/user-attachments/assets/7ea867e1-e8fa-4756-9cad-0310521da422" />
+
+
 An AI-powered resume analyzer that evaluates how well a resume matches a job description, using Google's Gemini LLM to generate a structured, evidence-based intelligence report.
 
 ## Features
